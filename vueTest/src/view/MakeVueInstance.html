@@ -3,18 +3,29 @@
 <head>
 <script src="../js/vue.js"></script>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>test Page</title>
 </head>
 <body>
    <div id="app">
-      {{ message }}
+     <p>{{foo}}</p>
+     <button v-on:click="foo = 'baz'">Change it</button>
    </div>
 
 
 <script>
-	var vm = new Vue({
-		//옵션
+	
+	
+	var obj = {
+			foo: 'bar'
+	}
+	
+	Object.freeze(obj)
+	
+	new Vue({
+		el:'#app',
+		data:obj
 	})
+	
 </script>
 </body>
 </html>
