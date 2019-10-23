@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="../js/vue.js"></script>
+<meta charset="EUC-KR">
+<title>test Page</title>
+</head>
+<body>
+
+<div v-bind:class={active:isActive}></div>
+
+<div class ="static"
+	v-bind:class="{active : isActive, 'text-danger':hasError}">
+</div>
+
+<script>
+
+data:{
+	isActive : true,
+	error: null
+}
+	
+	
+</script>
+</body>
+</html>
